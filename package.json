@@ -1,0 +1,33 @@
+{
+  "name": "prueba-server",
+  "version": "1.0.0",
+  "description": "Servidor prueba",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch server --exec babel-node server/index.js",
+    "build": "babel server -d dist",
+    "heroku-postbuild": "npm run build && cd client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.18"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
+  }
+}
